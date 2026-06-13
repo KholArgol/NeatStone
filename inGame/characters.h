@@ -10,7 +10,7 @@ using namespace std;
 
 class character {
 public:
-    stringacter(string ofclass, int attack, int pvMax) {m_ofClass = ofclass; m_attack = attack; m_pvMax = pvMax; m_pv = pvMax;};
+    character(string ofclass, int attack, int pvMax) {m_ofClass = ofclass; m_attack = attack; m_pvMax = pvMax; m_pv = pvMax;};
 
     receiveDmg();
     healDmg();
