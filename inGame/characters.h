@@ -15,6 +15,14 @@ public:
     receiveDmg();
     healDmg();
     attack();
+    isDead();
+
+    setPv();
+    getPV();
+    setAttack();
+    getAttack();
+    setStatus();
+    getStatus();
 
 private:
     string m_ofClass;
@@ -35,15 +43,25 @@ private:
 
 class hero : public character {
 public:
-    hero(std::string ofClass) : character(ofClass, 0, 30) {};
+    hero(string ofClass) : character(ofClass, 0, 30) {};
 
-private:
-
+    heroPower();
+    isDead();
 };
+//TODO : class for each class
 
 class minion : public character {
 public:
     minion(string ofClass, int attack, int pvMax, int cost, string type, int ID, hero *owner) : character(ofClass, attack, pvMax) {m_cost = cost; m_type = type; m_ID = ID; m_owner = owner;};
+
+    getID();
+    setOwner();
+    getOwner();
+    getCost();
+    getType();
+    setStatus();
+    getStatus();
+    isDead();
 
 private:
     int m_ID;
